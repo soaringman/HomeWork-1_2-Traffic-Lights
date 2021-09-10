@@ -18,21 +18,21 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i6d-0Q-RbH" userLabel="Light Red">
                                 <rect key="frame" x="132" y="89" width="150" height="150"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="i6d-0Q-RbH" secondAttribute="height" multiplier="1:1" id="E7D-vv-BmQ"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRu-8i-lxT" userLabel="Light Ellow">
                                 <rect key="frame" x="132" y="266" width="150" height="150"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eRu-8i-lxT" secondAttribute="height" multiplier="1:1" id="bmn-v2-N5F"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rkg-az-hsX" userLabel="Light Green">
                                 <rect key="frame" x="132" y="443" width="150" height="150"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rkg-az-hsX" secondAttribute="height" multiplier="1:1" id="3Kb-Um-sBj"/>
                                 </constraints>
@@ -44,6 +44,9 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="210" id="TJS-iR-wdh"/>
                                 </constraints>
                                 <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="startButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="vlQ-lV-hE0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -62,6 +65,12 @@
                             <constraint firstItem="eRu-8i-lxT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="knB-E1-xUU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLight" destination="rkg-az-hsX" id="nYj-Ds-42W"/>
+                        <outlet property="redLight" destination="i6d-0Q-RbH" id="jfi-1l-txB"/>
+                        <outlet property="startButton" destination="UnN-r7-cFN" id="5G3-6Y-jIY"/>
+                        <outlet property="yellowLight" destination="eRu-8i-lxT" id="5mQ-dO-uBo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -72,8 +81,14 @@
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
